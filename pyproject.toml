@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leakhound"
+version = "0.1.0"
+description = "A zero dependency scanner that catches leaked secrets before they ship."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "SiteQ8" }]
+keywords = [
+  "security",
+  "secrets",
+  "secret-scanning",
+  "credentials",
+  "devsecops",
+  "cli",
+  "sarif",
+  "pre-commit",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.urls]
+Homepage = "https://github.com/SiteQ8/LeakHound"
+Repository = "https://github.com/SiteQ8/LeakHound"
+Issues = "https://github.com/SiteQ8/LeakHound/issues"
+
+[project.scripts]
+leakhound = "leakhound.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["leakhound*"]

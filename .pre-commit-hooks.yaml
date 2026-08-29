@@ -1,0 +1,7 @@
+- id: leakhound
+  name: LeakHound secret scan
+  description: Scan staged files for leaked secrets.
+  entry: leakhound scan
+  language: python
+  pass_filenames: true
+  types: [text]
